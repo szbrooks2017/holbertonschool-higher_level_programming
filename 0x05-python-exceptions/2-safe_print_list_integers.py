@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def safe_print_list_integers(my_list=[], x=0):
 
     """
@@ -9,13 +10,14 @@ def safe_print_list_integers(my_list=[], x=0):
     #x can be bigger than the length - exception
     #Return the real number of ints printed
     """
+
     count = 0
 
     for i in range(x):
         try:
             print("{:d}".format(my_list[i]), end="")
             count += 1
-        except (IndexError, ValueError, TypeError):
+        except (ValueError, TypeError):
             continue
 
     print()
