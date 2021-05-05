@@ -20,6 +20,7 @@ class Square:
 
         self.__size = size
         self.__position = position
+
     @property
     def size(self):
         return self.__size
@@ -53,8 +54,6 @@ class Square:
     def my_print(self):
         if self.__size is 0:
             print()
-
-            
 
         for i in range(self.__size):
             for k in range(self.__position[0]):
