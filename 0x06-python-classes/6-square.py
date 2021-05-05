@@ -21,7 +21,7 @@ class Square:
         self.__size = size
         self.__position = position
 
-        if type(position[1, 0]) not int
+        if type(position[0]) is not int or type(position[1]) is not int:
             raise TypeError("position must be tuple of 2 positive integers")
 
     @property
