@@ -1,4 +1,4 @@
-  #!/usr/bin/python3
+#!/usr/bin/python3
 """
 a class rectangle
 ##private instance, property setter, -width, must be an int or typeerror
