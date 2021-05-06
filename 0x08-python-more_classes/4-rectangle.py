@@ -64,5 +64,5 @@ class Rectangle:
         string = (self.__width * m for a in range(self.__height))
         return '\n'.join(string)
 
-    def __rpr__(self):
-        return 'Rectangle(%d, %d)' % (self.__width, self.__height)
+    def __repr__(self):
+        return "Rectangle({%d}, {%d}".format(self.__width, self.__height)
