@@ -23,8 +23,6 @@ class Square:
 
         if type(position) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if type(size) is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
