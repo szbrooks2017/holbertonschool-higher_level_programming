@@ -18,7 +18,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
 
-        if not isinstance(tuple, int):
+        if type(position) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(size) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
