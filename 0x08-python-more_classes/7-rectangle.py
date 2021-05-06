@@ -18,6 +18,8 @@ class Rectangle:
 
     number_of_instances = 0
 
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -60,14 +62,14 @@ class Rectangle:
         p = 2*(self.__height + self.__width)
         return p
 
-    print_symbol = '#'
-
     def __str__(self):
         string = ""
         if self.area() == 0:
             return ""
-        string = (self.__width * print_symbol for a in range(self.__height))
-        return '\n'.join(string)
+        POUND = str(self.print_symbol)
+        string = (self.__width * POUND for a in range(self.__height))
+        lastString = '\n'.join(string)
+        return (lastString)
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
