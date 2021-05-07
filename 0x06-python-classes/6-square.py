@@ -27,7 +27,7 @@ class Square:
 
         if type(position[0]) is not int and position[0] < 0 and\
            type(position[1]) is not int and position[1] < 0 and\
-           type(position) is not tuple and len(position) is not 2:
+           type(position) is not tuple and len(position) < 2:
             raise TypeError("position must be tuple of 2 positive integers")
         else:
             self.position = position
