@@ -18,8 +18,8 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -51,14 +51,11 @@ class Square:
         return square_area
 
     def my_print(self):
-        if self.__size is 0:
+        if self.__size == 0:
             print()
             return
         for i in range(self.__position[1]):
             print()
-        for i in range(self.size):
-            for k in range(self.__position[0]):
-                print(" ", end="")
-            for j in range(self.__size):
-                print("#", end="")
-            print()
+        for i in range(self.__size):
+            print(' ' * self.__position[0], end='')
+            print("#" * self.__size)
