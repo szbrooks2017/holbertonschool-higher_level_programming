@@ -28,7 +28,7 @@ class Square:
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -47,8 +47,7 @@ class Square:
             self.__position = value
 
     def area(self):
-        square_area = self.__size * self.__size
-        return square_area
+        return (self.__size) ** 2
 
     def my_print(self):
         if self.__size == 0:
