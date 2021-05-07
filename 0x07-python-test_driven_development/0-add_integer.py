@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""
-a & b must be int/float or TypeError w/exception
-a & b must be casted to int if float
-return a + b
-"""
+""" Module for add_integer function """
 
 
 def add_integer(a, b=98):
+    """
+    add integer adds the integer
+    """
+
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
