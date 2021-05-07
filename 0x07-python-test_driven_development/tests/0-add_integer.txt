@@ -26,3 +26,9 @@ Tests:
     >>> add_integer(float('inf'), float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
+    >>> add_integer(1)
+    99
+    >>> add_integer('jodie')
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>>
