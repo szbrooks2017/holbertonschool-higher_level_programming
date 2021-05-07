@@ -1,21 +1,28 @@
->>> add_integer = __import__('0-add_integer').add_integer
 
->>> add_integer(1, 2)
-3
->>> add_integer(jodie, foster)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'jodie' is not defined
->>> add_integer(3.2, 2)
-5
->>> add_integer(2, jodie)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'jodie' is not defined
->>> add_integer(4, 543636)
-543640
->>> add_integer(2, 3, 4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
->>>
+Import ''add_integer'' from ''0-add_integer'' module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Tests:
+
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(jodie, foster)
+    Traceback (most recent call last):
+    NameError: name 'jodie' is not defined
+    >>> add_integer(3.2, 2)
+    5
+    >>> add_integer(2, jodie)
+    Traceback (most recent call last):
+    NameError: name 'jodie' is not defined
+    >>> add_integer(4, 543636)
+    543640
+    >>> add_integer(2, 3, 4)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+    >>> add_integer(float('NaN'), float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+    >>> add_integer(float('inf'), float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
