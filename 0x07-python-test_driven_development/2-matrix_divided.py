@@ -23,11 +23,13 @@ def matrix_divided(matrix, div):
          integers/floats")
 
     # check row type then row length
+    row_length = len(matrix[0])
     for row in matrix:
         if not isinstance(row, (int, float, list)):
             raise TypeError("matrix must be a matrix (list of lists) of\
              integers/floats")
-        if len(row) != len(matrix[0]):
+    for row in range(len(matrix)):
+        if row_length != len(matrix[row]):
             raise TypeError("Each row of the matrix must have the same size")
     divided = [[round(element / div, 2) for element in row] for row in matrix]
     return divided
