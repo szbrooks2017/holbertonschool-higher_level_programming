@@ -1,3 +1,13 @@
 Import:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Tests:
+    >>> text_indentation(23)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation('23')
+    23
+    >>> text_indentation('string')
+    string
+    >>> text_indentation('')
+    >>>
