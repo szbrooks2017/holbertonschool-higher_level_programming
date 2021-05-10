@@ -1,23 +1,24 @@
+
 Import: '''say_my_name''' from the '''3-say_my_name''' module:
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Tests:
 
-    >>> say_my_name('jodie', 'foster')
+    >>> say_my_name('jodie','foster')
     My name is jodie foster
-    >>> say_my_name('jodie')
-    My name is jodie
-    >>> say_my_name(Ash Angelark 13)
-    SyntaxError: invalid syntax
-    >>> say_my_name("Ash Angelark 13")
-    My name is Ash Angelark 13
+
+    >>> say_my_name('')
+    My name is  
+
     >>> say_my_name(13)
     Traceback (most recent call last):
     TypeError: first_name must be a string
+
     >>> say_my_name(13, 12)
     Traceback (most recent call last):
     TypeError: first_name must be a string
+
     >>> say_my_name('jodie', 12)
     Traceback (most recent call last):
     TypeError: last_name must be a string
