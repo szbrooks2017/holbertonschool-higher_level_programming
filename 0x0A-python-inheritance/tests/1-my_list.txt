@@ -19,6 +19,7 @@ Tests:
     [-3, -2, -1, 4, 5]
 
 Testing with print:
+
     >>> MyList.print_sorted([1, 2, 3])
     [1, 2, 3]
     >>> newlist = MyList()
@@ -31,3 +32,8 @@ Testing with print:
     >>> newlist.print_sorted()
     [0, 1, 2, 3]
     >>>
+
+Testing for new list:
+
+    >>> MyList.print_sorted([1])
+    [1]
