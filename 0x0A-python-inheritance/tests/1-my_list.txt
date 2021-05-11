@@ -1,0 +1,21 @@
+The '''1-my_list''' module
+
+Import:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Tests:
+
+    >>> l = MyList()
+    >>> l.print_sorted()
+    []
+    >>> l.append(-1)
+    >>> l.append(-2)
+    >>> l.append(-3)
+    >>> l
+    [-1, -2, -3]
+    >>> l.append(4)
+    >>> l.append(5)
+    >>> l.print_sorted()
+    [-3, -2, -1, 4, 5]
+    >>>
