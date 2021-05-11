@@ -1,4 +1,4 @@
-
+:
 Import ''1-my_list'' module:
 
     >>> MyList = __import__('1-my_list').MyList
@@ -19,7 +19,8 @@ Tests:
     [-3, -2, -1, 4, 5]
 
 Testing with print:
-
+    >>> MyList.print_sorted([1, 2, 3])
+    [1, 2, 3]
     >>> newlist = MyList()
     >>> newlist.append(3)
     >>> newlist.append(2)
