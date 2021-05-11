@@ -35,5 +35,24 @@ Testing with print:
 
 Testing for new list:
 
-    >>> MyList.print_sorted([1])
-    [1]
+    >>> newlist.append(1)
+    >>> newlist.append(2)
+    >>> newlist.append(3)
+    >>> print(newlist)
+    [1, 2, 3]
+    >>> newlist.print_sorted()
+    [1, 2, 3]
+    >>> print(newlist)
+    [1, 2, 3]
+    >>> newlist.append(4)
+    >>> newlist.append(19)
+    >>> print(newlist)
+    [1, 2, 3, 4, 19]
+    >>> newlist.append(3)
+    >>> print(newlist)
+    [1, 2, 3, 4, 19, 3]
+    >>> newlist.print_sorted()
+    [1, 2, 3, 3, 4, 19]
+    >>> print(newlist)
+    [1, 2, 3, 4, 19, 3]
+    >>>
