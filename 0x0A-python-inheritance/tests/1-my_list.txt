@@ -19,7 +19,7 @@ Tests:
     [-3, -2, -1, 4, 5]
 
 Testing for new list:
-
+    >>> newlist = MyList()
     >>> newlist.append(1)
     >>> newlist.append(2)
     >>> newlist.append(3)
