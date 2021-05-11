@@ -18,32 +18,11 @@ Tests:
     >>> l.print_sorted()
     [-3, -2, -1, 4, 5]
 
-Testing with print:
-
-    >>> MyList.print_sorted([1, 2, 3])
-    [1, 2, 3]
-    >>> newlist = MyList()
-    >>> newlist.append(3)
-    >>> newlist.append(2)
-    >>> newlist.append(1)
-    >>> newlist.append(0)
-    >>> print(newlist)
-    [3, 2, 1, 0]
-    >>> newlist.print_sorted()
-    [0, 1, 2, 3]
-    >>>
-
 Testing for new list:
 
     >>> newlist.append(1)
     >>> newlist.append(2)
     >>> newlist.append(3)
-    >>> print(newlist)
-    [1, 2, 3]
-    >>> newlist.print_sorted()
-    [1, 2, 3]
-    >>> print(newlist)
-    [1, 2, 3]
     >>> newlist.append(4)
     >>> newlist.append(19)
     >>> print(newlist)
