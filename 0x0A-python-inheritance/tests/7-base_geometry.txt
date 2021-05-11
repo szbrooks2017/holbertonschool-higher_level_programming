@@ -13,4 +13,26 @@ Tests:
     >>> bg.integer_validator("jodie", -3)
     Traceback (most recent call last):
     ValueError: jodie must be greater than 0
+    >>> bg.integer_validator("jodie", [3])
+    Traceback (most recent call last):
+    TypeError: jodie must be an integer
+    >>> bg.integer_validator("jodie", 0)
+    Traceback (most recent call last):
+    ValueError: jodie must be greater than 0
+    >>> bg.integer_validator("jodie", [3, 4])
+    Traceback (most recent call last):
+    TypeError: jodie must be an integer
+    >>> bg.integer_validator("jodie", None)
+    Traceback (most recent call last):
+    TypeError: jodie must be an integer
+    >>> bg.integer_validator("jodie", True)
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    >>> bg.integer_validator("foster", (7,))
+    Traceback (most recent call last):
+    TypeError: foster must be an integer
+    >>> bg.integer_validator("foster")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
     >>>
