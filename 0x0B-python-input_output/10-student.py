@@ -13,8 +13,8 @@ class Student:
         new_dict = {}
         if attrs is None:
             return vars(self)
-
-        for key in attrs:
-            if key in self.__dict__:
-                new_dict[key] = self.__dict__[key]
-                return new_dict
+        else:
+            for key in attrs:
+                if key in self.__dict__:
+                    new_dict[key] = self.__dict__[key]
+                    return new_dict
