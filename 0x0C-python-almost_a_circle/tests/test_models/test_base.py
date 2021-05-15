@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
 
     """tests for base"""
 
-    def setUp(self)
+    def setUp(self):
         pass
 
     def test_base_for_ID(self):
