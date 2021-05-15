@@ -12,7 +12,7 @@ class TestBase(unittest.TestCase):
         pass
 
     def test_base_for_ID(self):
-        self.b1 = Base()
+        b1 = Base()
         self.assertTrue(b1.id, 1)
 
 if __name__ == '__main__':
