@@ -14,7 +14,7 @@ class TestBase(unittest.TestCase):
     def test_base_for_ID(self):
         b1 = Base()
         self.assertTrue(b1.id, 1)
-        b1 = Base(None)
+        b2 = Base(None)
         self.assertTrue(b1.id, 2)
 
     def test_if_id_match(self):
