@@ -15,11 +15,11 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertTrue(b1.id, 1)
         b1 = Base(None)
-        self.assertTrue(bq.id, 2)
+        self.assertTrue(b1.id, 2)
 
     def test_if_id_match(self):
         b98 = Base(98)
-        self.assertEqual(base98.id, 98)
+        self.assertEqual(b98.id, 98)
 
 if __name__ == '__main__':
     unittest.main()
