@@ -21,7 +21,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_negative_value(self):
         with self.assertRaises(ValueError):
-            r = Rectangle(-1, -2, -3, -4)
+            r = Rectangle(-1, 2, 3, 4)
+        with self.assertRaises(ValueError):
+            r = Rectangle(1, -2, 3, 4)
+        with self.assertRaises(ValueError):
+            r = Rectangle(1, 2, -3, 4)
+        with self.assertRaises(ValueError):
+            r = Rectangle(1, 2, 3, -4)
 
     def test_value_type(self):
         with self.assertRaises(TypeError):
