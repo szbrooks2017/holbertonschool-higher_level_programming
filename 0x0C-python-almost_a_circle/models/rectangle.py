@@ -68,5 +68,11 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        """ dfine the area """
+        """ define the area """
         return self.__height * self.__width
+
+    def display(self):
+        if self.area() == 0:
+            return ""
+        string = (self.__width * '#' for item in range(self.__height))
+        print('\n'.join(string))
