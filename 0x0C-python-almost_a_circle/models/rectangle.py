@@ -72,6 +72,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
+        """ print out the rectangle with #"""
         if self.area() == 0:
             return ""
         string = (self.__width * '#' for item in range(self.__height))
