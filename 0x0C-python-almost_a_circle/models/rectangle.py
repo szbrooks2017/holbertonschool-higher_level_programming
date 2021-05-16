@@ -16,6 +16,7 @@ class Rectangle(Base):
         self.y = y
 
     def update(self, *args):
+        """ assign an argument to each attribute"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         for item in range(len(args)):
             setattr(self, attributes[item], args[item])
