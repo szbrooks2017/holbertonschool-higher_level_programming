@@ -15,4 +15,4 @@ class Square(Rectangle):
         """ overiding str with new specifications"""
         self.size = s1
         self.size = s2
-         return "[Rectangle] ({:d}) {}/{} - {}".format(i, x, y, s1, s2)
+        return "[Rectangle] ({:d}) {}/{} - {}".format(i, x, y, s1, s2)
