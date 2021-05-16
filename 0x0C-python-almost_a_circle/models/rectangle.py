@@ -80,4 +80,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """ overriding str to print specific message"""
-        return "[Rectangle] ({:d}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        x = self.x
+        y = self.y
+        h = self.height
+        w = self.width
+        i = self.id
+        return "[Rectangle]({: d}) {} / {} - {} / {}".format(i, x, y, w, h)
