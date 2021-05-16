@@ -16,6 +16,7 @@ class TestRectangle(unittest.TestCase):
     def test_width_height_value(self):
         with self.assertRaises(ValueError):
             r = Rectangle(0, 1)
+        with self.assertRaises(ValueError):
             r = Rectangle(1, 0)
 
     def test_negative_value(self):
@@ -25,6 +26,12 @@ class TestRectangle(unittest.TestCase):
     def test_value_type(self):
         with self.assertRaises(TypeError):
             r = Rectangle(2, 3, "4")
+        with self.assertRaises(TypeError):
+            r = Rectangle(2, 3, 3, "4")
+        with self.assertRaises(TypeError):
+            r = Rectangle(2, "4", 3, 4)
+        with self.assertRaises(TypeError):
+            r = Rectangle("2", 3, 3, 4)
 
 if __name__ == '__main__':
     unittest.main()
