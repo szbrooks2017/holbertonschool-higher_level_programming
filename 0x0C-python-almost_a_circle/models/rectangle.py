@@ -73,10 +73,12 @@ class Rectangle(Base):
 
     def display(self):
         """ print out the rectangle with #"""
-        if self.area() == 0:
-            return ""
-        string = (self.__width * '#' for item in range(self.__height))
-        print('\n'.join(string))
+        x = self.x
+        y = self.y
+        h = self.height
+        w = self.width
+        string = ((' ' * x) + ('#' * w) for item in range(h))
+        print(('\n' * y) + '\n'.join(string))
 
     def __str__(self):
         """ overriding str to print specific message"""
