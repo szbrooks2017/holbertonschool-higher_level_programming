@@ -15,11 +15,16 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ assign an argument to each attribute"""
         attributes = ['id', 'width', 'height', 'x', 'y']
-        for item in range(len(args)):
-            setattr(self, attributes[item], args[item])
+
+        if args:
+            for item in range(len(args)):
+                setattr(self, attributes[item], args[item])
+        if kwargs:
+            for item in kwargs:
+                setattr(self, item, kwargs[item])
 
     @property
     def width(self):
