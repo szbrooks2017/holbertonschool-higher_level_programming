@@ -28,6 +28,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = Rectangle(1, 2, 3, -4)
 
+    def test_area(self):
+        r = Rectangle(10, 10)
+        self.assertEqual(r.area(), 100)
+
+    def test_args(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle(1)
+
     def test_value_type(self):
         with self.assertRaises(TypeError):
             r = Rectangle(2, 3, "4")
