@@ -11,7 +11,6 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_exists(self):
         r = Rectangle(3, 4, 5, 6)
-        r = Rectangle(2, 3, 3, 3, 4)
 
     def test_width_height_value(self):
         with self.assertRaises(ValueError):
