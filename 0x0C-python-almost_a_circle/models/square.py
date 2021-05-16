@@ -13,5 +13,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """ overiding str with new specifications"""
-        return "[Rectangle] ({:d})\
+        return "[Square] ({:d})\
                  {}/{} - {}".format(self.id, self.x, self.y, self.size)
