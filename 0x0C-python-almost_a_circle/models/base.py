@@ -25,7 +25,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ returns a json object from a list of dicts"""
         jfile = []
-        if list_dictionaries:
-            jfile = json.dumps(list_dictionaries)
+        if list_dictionaries is None:
             return jfile
+        jfile = json.dumps(list_dictionaries)
         return jfile
