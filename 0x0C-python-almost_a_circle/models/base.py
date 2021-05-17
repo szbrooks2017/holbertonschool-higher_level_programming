@@ -24,8 +24,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns a json object from a list of dicts"""
+        jfile = []
         if list_dictionaries:
             jfile = json.dumps(list_dictionaries)
             return jfile
         else:
-            return []
+            return jfile
