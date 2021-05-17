@@ -12,14 +12,14 @@ class TestSquare(unittest.TestCase):
     """ tests for Rectangle"""
 
     def test_square_exists(self):
-        s = Square(3, 3, 5, 6)
+        s = Square(3, 3, 5)
         self.assertEqual(s.width, 3)
         self.assertEqual(s.height, 3)
         self.assertEqual(s.x, 3)
         self.assertEqual(s.y, 5)
 
     def test_square_width_height_x_exists(self):
-        s = Square(3, 3, 5)
+        s = Square(3, 3, 3)
         self.assertEqual(s.width, 3)
         self.assertEqual(s.height, 3)
         self.assertEqual(s.x, 3)
@@ -34,8 +34,8 @@ class TestSquare(unittest.TestCase):
             s = Square(0, 1)
 
     def test_update(self):
-        s = Square(1)
-        self.assertEqual(str(s), "[Square] (10) 0/0 - 1")
+        s = Square(1, 0, 0, 1)
+        self.assertEqual(str(s), "[Square] (1) 0/0 - 1")
 
         s.update(1, 2)
         self.assertEqual(str(s), "[Square] (1) 0/0 - 2")
@@ -63,8 +63,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.area(), 4)
 
     def test_str(self):
-        s = Square(1)
-        self.assertEqual(str(s), "[Square] (9) 0/0 - 1")
+        s = Square(1, 0, 0, 1)
+        self.assertEqual(str(s), "[Square] (1) 0/0 - 1")
 
     def test_args(self):
         with self.assertRaises(TypeError):
@@ -76,7 +76,7 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             s = Square(1, "1", 3)
         with self.assertRaises(TypeError):
-            s = Square("1", 1, 3, 4)
+            s = Square("1", 1, 3)
 
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
     def test_display(self, mock_stdout):
