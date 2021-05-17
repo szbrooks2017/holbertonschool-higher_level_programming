@@ -40,3 +40,11 @@ class Base:
                 obj.append(cls.to_dictionary(item))
         with open(filename, 'w') as jfile:
             jfile.write(cls.to_json_string(obj))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns list from json string"""
+        if json_string is None:
+            return []
+        pfile = json.loads(json_string)
+        return pfile
