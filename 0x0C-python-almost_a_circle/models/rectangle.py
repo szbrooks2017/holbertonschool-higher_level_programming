@@ -26,6 +26,11 @@ class Rectangle(Base):
             for item in kwargs:
                 setattr(self, item, kwargs[item])
 
+    def to_dictionary(self):
+        d = {'id': self.id, 'width': self.width,
+             'height': self.height, 'x': self.x, 'y': self.y}
+        return d
+
     @property
     def width(self):
         return self.__width
