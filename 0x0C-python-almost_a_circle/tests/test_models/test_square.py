@@ -121,5 +121,13 @@ class TestSquare(unittest.TestCase):
         s1.display()
         self.assertEqual(mock_stdout.getvalue(), "\n #\n")
 
+    def test_load_from_file(self):
+        filename = 'Square.json'
+        if os.path.exists(filename):
+            os.remove(filename)
+        self.assertEqual(Square.load_from_file(), [])
+        Square.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
+
 if __name__ == '__main__':
     unittest.main()

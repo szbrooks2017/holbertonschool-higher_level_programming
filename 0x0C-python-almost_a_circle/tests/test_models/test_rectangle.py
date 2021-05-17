@@ -13,6 +13,14 @@ class TestRectangle(unittest.TestCase):
 
     """ tests for Rectangle"""
 
+    def test_load_from_file(self):
+        filename = 'Rectangle.json'
+        if os.path.exists(filename):
+            os.remove(filename)
+        self.assertEqual(Rectangle.load_from_file(), [])
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
+
     def test_save_to_file(self):
         filename = "Rectangle.json"
         if os.path.exists(filename):
