@@ -11,6 +11,21 @@ Rectangle = rectangle.Rectangle
 class TestRectangle(unittest.TestCase):
 
     """ tests for Rectangle"""
+    def test_save_to_file(self):
+        obj = []
+        Rectangle.save_to_file(obj)
+        with open('Rectangle.json', 'r') as f:
+            self.assertEqual('[]', f.read())
+
+    def test_create_rec(self):
+        r = {"id": 1, "width": 1, "height": 1, "x": 0, "y": 0}
+        rcreate = Rectangle.create(**r)
+        self.assertEqual("[Rectangle] (1) 0/0 - 1/1", str(rcreate))
+
+    def test_dictionary(self):
+        r = Rectangle(1, 1, 1, 1)
+        d = r.to_dictionary()
+        self.assertEqual({'id': 3, 'width': 1, 'height': 1, 'x': 1, 'y': 1}, d)
 
     def test_rectangle_exists(self):
         r = Rectangle(3, 4, 5, 6)
