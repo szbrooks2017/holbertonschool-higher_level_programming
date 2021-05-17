@@ -20,6 +20,12 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open(filename, 'r') as f:
             self.assertEqual(f.read(), '[]')
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
+        if os.path.exists(filename):
+            os.remove(filename)
+        Rectangle.save_to_file([Rectangle(1, 1, 0, 0, 1)])
+        self.assertTrue(os.path.exists(filename))
 
     def test_create_rec(self):
         r = {"id": 1, "width": 1, "height": 1, "x": 0, "y": 0}
