@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ tests for the base class"""
+import io
 import unittest
+import unittest.mock
 from models import rectangle
 from models.base import Base
 Rectangle = rectangle.Rectangle
@@ -88,6 +90,12 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(2, "4", 3, 4)
         with self.assertRaises(TypeError):
             r = Rectangle("2", 3, 3, 4)
+
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def test_display(self, mock_stdout):
+        r = Rectangle(1, 1, 1, 1)
+        r.display()
+        self.assertEqual(mock_stdout.getvalue(), "\n #\n")
 
 if __name__ == '__main__':
     unittest.main()
