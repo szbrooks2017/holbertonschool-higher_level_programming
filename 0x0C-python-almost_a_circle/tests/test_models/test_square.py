@@ -9,7 +9,6 @@ Square = square.Square
 
 
 class TestSquare(unittest.TestCase):
-
     """ tests for Rectangle"""
 
     def test_square_exists(self):
