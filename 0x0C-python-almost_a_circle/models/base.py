@@ -28,5 +28,4 @@ class Base:
         if list_dictionaries:
             jfile = json.dumps(list_dictionaries)
             return jfile
-        else:
-            return jfile
+        return jfile
