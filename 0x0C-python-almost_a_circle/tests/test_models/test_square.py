@@ -14,7 +14,7 @@ class TestSquare(unittest.TestCase):
     def test_dictionary(self):
         s = Square(1)
         d = s.to_dictionary()
-        self.assertEqual({'id': 1, 'width': 1, 'height': 1, 'x': 0, 'y': 0}, d)
+        self.assertEqual({'id': 2, 'size': 1, 'x': 0, 'y': 0}, d)
 
     def test_square_exists(self):
         s = Square(3, 3, 5)
