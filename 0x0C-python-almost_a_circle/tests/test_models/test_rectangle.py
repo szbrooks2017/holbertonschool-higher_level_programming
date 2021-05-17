@@ -99,8 +99,8 @@ class TestRectangle(unittest.TestCase):
 
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
     def test_display(self, mock_stdout):
-        r = Rectangle(1, 1, 1, 1)
-        r.display()
+        r1 = Rectangle(1, 1, 1, 1)
+        r1.display()
         self.assertEqual(mock_stdout.getvalue(), "\n #\n")
 
 if __name__ == '__main__':
