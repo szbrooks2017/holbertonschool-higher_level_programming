@@ -25,7 +25,7 @@ class TestRectangle(unittest.TestCase):
     def test_dictionary(self):
         r = Rectangle(1, 1, 1, 1)
         d = r.to_dictionary()
-        self.assertEqual({'id': 3, 'width': 1, 'height': 1, 'x': 1, 'y': 1}, d)
+        self.assertEqual({'width': 1, 'height': 1, 'x': 1, 'y': 1}, d)
 
     def test_rectangle_exists(self):
         r = Rectangle(3, 4, 5, 6)
