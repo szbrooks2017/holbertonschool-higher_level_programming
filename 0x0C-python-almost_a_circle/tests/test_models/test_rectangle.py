@@ -97,5 +97,11 @@ class TestRectangle(unittest.TestCase):
         r.display()
         self.assertEqual(mock_stdout.getvalue(), "\n #\n")
 
+    @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
+    def test_display(self, mock_stdout):
+        r = Rectangle(1, 1)
+        r.display()
+        self.assertEqual(mock_stdout.getvalue(), "#\n")
+
 if __name__ == '__main__':
     unittest.main()
