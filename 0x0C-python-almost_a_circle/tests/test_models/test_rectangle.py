@@ -23,9 +23,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual("[Rectangle] (1) 0/0 - 1/1", str(rcreate))
 
     def test_dictionary(self):
-        r = Rectangle(1, 1, 1, 1)
+        r = Rectangle(10, 2, 1, 9)
         d = r.to_dictionary()
-        self.assertEqual({'width': 1, 'height': 1, 'x': 1, 'y': 1}, d)
+        self.assertEqual({'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}, d)
 
     def test_rectangle_exists(self):
         r = Rectangle(3, 4, 5, 6)
