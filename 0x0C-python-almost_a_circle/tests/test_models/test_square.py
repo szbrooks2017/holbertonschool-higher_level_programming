@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ tests for the base class"""
+import os
 import io
 import unittest
 import unittest.mock
@@ -9,7 +10,32 @@ Square = square.Square
 
 
 class TestSquare(unittest.TestCase):
+
     """ tests for Square"""
+
+
+    def test_save_to_file(self):
+        filename = "Square.json"
+        if os.path.exists(filename):
+            os.remove(filename)
+        Square.save_to_file(None)
+        with open(filename, 'r') as f:
+            self.assertEqual(f.read(), '[]')
+
+        if os.path.exists(filename):
+            os.remove(filename)
+        Square.save_to_file([])
+        self.assertTrue(os.path.exists(filename))
+
+        if os.path.exists(filename):
+            os.remove(filename)
+        Square.save_to_file([Square(1, 1, 0, 32)])
+        self.assertTrue(os.path.exists(filename))
+
+    def test_create_rec(self):
+        s = {"id": 1, "size": 1, "x": 0, "y": 0}
+        screate = Square.create(**s)
+        self.assertEqual("[Square] (1) 0/0 - 1", str(screate))
 
     def test_dictionary(self):
         s = Square(1, 1, 1, 7)
