@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ tests for the base class"""
 import io
+import os
 import unittest
 import unittest.mock
 from models import rectangle
@@ -13,10 +14,12 @@ class TestRectangle(unittest.TestCase):
     """ tests for Rectangle"""
 
     def test_save_to_file(self):
-        obj = []
-        Rectangle.save_to_file(obj)
-        with open('Rectangle.json', 'r') as f:
-            self.assertEqual('[]', f.read())
+        filename = "Rectangle.json"
+        if os.path.exists(filename):
+            os.remove(filename)
+        Rectangle.save_to_file(None)
+        with open(filename, 'r') as f:
+            self.assertEqual(f.read(), '[]')
 
     def test_create_rec(self):
         r = {"id": 1, "width": 1, "height": 1, "x": 0, "y": 0}
@@ -26,7 +29,8 @@ class TestRectangle(unittest.TestCase):
     def test_dictionary(self):
         r = Rectangle(10, 2, 1, 9, 7)
         d = r.to_dictionary()
-        self.assertEqual({'x': 1, 'y': 9, 'id': 7, 'height': 2, 'width': 10}, d)
+        self.assertEqual({'x': 1, 'y': 9, 'id': 7,
+                          'height': 2, 'width': 10}, d)
 
     def test_rectangle_exists(self):
         r = Rectangle(3, 4, 5, 6)
