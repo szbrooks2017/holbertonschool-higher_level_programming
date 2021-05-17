@@ -12,7 +12,6 @@ class Base:
 
     """ create constructor if id is not none, assign id with this value """
     __nb_objects = 0
-    newValue = 0
 
     def __init__(self, id=None):
         if id is not None:
@@ -48,3 +47,14 @@ class Base:
             return []
         pfile = json.loads(json_string)
         return pfile
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes set"""
+        if cls.__name__ is "Rectangle":
+            dummy = cls(2, 3)
+        if cls.__name__ is "Square":
+            dummy = cls(2)
+
+        dummy.update(**dictionary)
+        return dummy
