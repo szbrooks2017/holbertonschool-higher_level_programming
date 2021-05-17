@@ -26,6 +26,6 @@ class Base:
         """ returns a json object from a list of dicts"""
         jfile = []
         if list_dictionaries is None:
-            return jfile
+            list_dictionaries = jfile
         jfile = json.dumps(list_dictionaries)
         return jfile
