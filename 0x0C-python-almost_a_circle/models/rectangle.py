@@ -27,6 +27,7 @@ class Rectangle(Base):
                 setattr(self, item, kwargs[item])
 
     def to_dictionary(self):
+        """ return a dictionary """
         d = {'id': self.id, 'width': self.width,
              'height': self.height, 'x': self.x, 'y': self.y}
         return d
