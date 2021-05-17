@@ -20,6 +20,16 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + '.json.'
+        try:
+            obj = from_json_string(filename)
+        except:
+            obj = []
+
+        create(cls, **dictionary)
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns a json object from a list of dicts"""
@@ -58,3 +68,17 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances"""
+        filename = cls.__name__ + '.json'
+        obj = []
+        try:
+            with open(filename, 'r') as f:
+                obj = cls.from_json_string(f.read())
+                for i, e in enumerate(obj):
+                    obj[i] = cls.create(**obj[i])
+            return obj
+        except:
+            return obj
