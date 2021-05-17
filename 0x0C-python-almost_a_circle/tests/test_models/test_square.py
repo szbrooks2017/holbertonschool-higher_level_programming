@@ -9,13 +9,12 @@ Square = square.Square
 
 
 class TestSquare(unittest.TestCase):
-    """ tests for Rectangle
+    """ tests for Square"""
 
     def test_dictionary(self):
-        s = Square(1)
+        s = Square(1, 1, 1, 7)
         d = s.to_dictionary()
-        self.assertEqual({'id': 2, 'size': 1, 'x': 0, 'y': 0}, d)
-    """
+        self.assertEqual({'id': 7, 'size': 1, 'x': 1, 'y': 1}, d)
 
     def test_square_exists(self):
         s = Square(3, 3, 5)
