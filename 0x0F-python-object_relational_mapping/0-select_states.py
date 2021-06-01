@@ -1,7 +1,7 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """list all states from database hbtn_0e_0_usa"""
 
-if __name__=="__main__":
+if __name__ == "__main__":
     from sys import argv
     import MySQLdb
     db = MySQLdb.connect(argv[1], argv[2], argv[3])
@@ -10,7 +10,6 @@ if __name__=="__main__":
     cur.execute("SELECT * from states ORDER BY states.id")
     states = cur.fetchall()
     for state in states
-        print(state)
+    print(state)
     cur.close()
     db.close()
-
