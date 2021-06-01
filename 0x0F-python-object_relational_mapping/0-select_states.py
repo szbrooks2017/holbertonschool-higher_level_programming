@@ -9,7 +9,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * from states ORDER BY states.id")
     states = cur.fetchall()
-    for state in states
-    print(state)
+    for state in states:
+        print(state)
     cur.close()
     db.close()
