@@ -3,4 +3,4 @@
 class Rectangle{
 
 }
-models.exports = Rectangle
+module.exports = Rectangle
