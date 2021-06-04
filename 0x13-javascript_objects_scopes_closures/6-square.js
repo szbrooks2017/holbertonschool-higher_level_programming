@@ -3,7 +3,7 @@
 const Square1 = require('./5-square');
 class Square extends Square1 {
   charPrint (c) {
-    if (c == null) {
+    if (c === undefined) {
       this.print();
     } else {
       for (let x = 0; x < this.height; x++) {
